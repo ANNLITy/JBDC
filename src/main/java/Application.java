@@ -1,52 +1,36 @@
+import POJO.Employee;
+
 import java.sql.*;
 import java.util.List;
 
 public class Application {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
+        EmployeeDAO employeeDAO = new EmployeeDAOImpl();
 
-        final String user = "postgres";
-        final String password = "25SchooL";
-        final String url = "jdbc:postgresql://localhost:5432/skypro";
+        Employee employee = new Employee(11, "Alla", "Sergeevna", "female", 2, 1);
 
-        try (final Connection connection = DriverManager.getConnection(url, user, password);
-             PreparedStatement statement = connection.prepareStatement("SELECT * FROM employee WHERE id = (?)")) {
+        employeeDAO.create(employee);
 
-            statement.setInt(1, 1);
+        System.out.println(employeeDAO.readById(12));
 
-            final ResultSet resultSet = statement.executeQuery();
+        List<Employee> employeeList = employeeDAO.readAll();
 
-            while (resultSet.next()) {
+        for (Employee employee1 : employeeList) {
+            System.out.println(employee1);
+        }
 
-                String firstName = "First_name: " + resultSet.getString(2);
-                String secondName = "Last_name: " + resultSet.getString(3);
-                String gender ="Gender: " + resultSet.getString(4);
-                int age = resultSet.getInt(5);
-                String cityID = "City_id: " + resultSet.getString(6);
+        employee = new Employee(4, "Sergey", "Andreev", "male", 30, 2);
 
+        employeeDAO.updateEmployee(employee);
 
-                System.out.println(firstName);
-                System.out.println(secondName);
-                System.out.println(gender);
-                System.out.println(age);
-                System.out.println(cityID);
+        System.out.println(employeeDAO.readById(12));
 
+        employeeDAO.delete(employee);
 
-            }
-            EmployeeDAO employeeDAO = new EmployeeDAOImpl(connection);
+        employeeList = employeeDAO.readAll();
 
-            Employee employee = new Employee(9, "Andrey", "Andreev", "male", 32, 1);
-            employeeDAO.create(employee);
-
-            employeeDAO.deleteById(7);
-
-            employeeDAO.updateEmployeeById(4, employee);
-            List<Employee> employees = employeeDAO.readAll();
-
-            for (Employee employee1 : employees) {
-                System.out.println(employee1);
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        for (Employee employee1 : employeeList) {
+            System.out.println(employee1);
         }
     }
 }

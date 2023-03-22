@@ -1,3 +1,5 @@
+package POJO;
+
 import java.util.Objects;
 
 public class City {
@@ -35,7 +37,7 @@ public class City {
 
     @Override
     public String toString() {
-        return "City{" +
+        return "POJO.City{" +
                 "cityId=" + cityId +
                 ", cityName='" + cityName + '\'' +
                 '}';
