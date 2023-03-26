@@ -8,7 +8,7 @@
         <property name="connection.url">jdbc:postgresql://localhost/skypro</property> <!-- BD Name -->
         <property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
         <property name="connection.username">postgres</property> <!-- DB User -->
-        <property name="connection.password">25SchooL</property> <!-- DB Password -->
+        <property name="connection.password">25School</property> <!-- DB Password -->
 
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
         <property name="hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
@@ -16,5 +16,7 @@
         <property name="show_sql">true</property> <!-- Show SQL in console -->
         <property name="format_sql">true</property> <!-- Show SQL formatted -->
 
+        <mapping class="src.main.java.model.Employee"/>
+        <mapping class="src.main.java.model.City"/>
     </session-factory>
 </hibernate-configuration>

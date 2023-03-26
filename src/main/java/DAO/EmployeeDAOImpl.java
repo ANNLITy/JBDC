@@ -1,4 +1,6 @@
-import POJO.Employee;
+package DAO;
+
+import src.main.java.model.Employee;
 import config.HibernateSessionFactoryUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -10,7 +12,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public void create(Employee employee) {
         try(Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
-            Transaction transaction = (Transaction) session.beginTransaction();
+            Transaction transaction = session.beginTransaction();
             session.save(employee);
             transaction.commit();
         }
@@ -23,15 +25,15 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
     @Override
     public List<Employee> readAll() {
-        List<Employee> employees = (List<Employee>) HibernateSessionFactoryUtil.getSessionFactory()
-                .openSession().createQuery("FROM Employee").list();
+        List<Employee> employees = HibernateSessionFactoryUtil.getSessionFactory()
+                .openSession().createQuery("FROM Employee", Employee.class).list();
         return employees;
     }
 
     @Override
     public void updateEmployee(Employee employee) {
         try (Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
-            Transaction transaction = (Transaction) session.beginTransaction();
+            Transaction transaction = session.beginTransaction();
             session.update(employee);
             transaction.commit();
         }
@@ -40,7 +42,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public void delete(Employee employee) {
         try(Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
-            Transaction transaction = (Transaction) session.beginTransaction();
+            Transaction transaction = session.beginTransaction();
             session.delete(employee);
             transaction.commit();
         }

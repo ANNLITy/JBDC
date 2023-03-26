@@ -1,8 +1,9 @@
 package config;
+import src.main.java.model.City;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import POJO.Employee;
+import src.main.java.model.Employee;
 
 public class HibernateSessionFactoryUtil {
     private static SessionFactory sessionFactory;
@@ -14,6 +15,7 @@ public class HibernateSessionFactoryUtil {
             try {
                 Configuration configuration = new Configuration().configure();
                 configuration.addAnnotatedClass(Employee.class);
+                configuration.addAnnotatedClass(City.class);
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
                 sessionFactory = configuration.buildSessionFactory(builder.build());
             } catch (Exception e) {

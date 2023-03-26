@@ -1,4 +1,6 @@
-import POJO.Employee;
+package DAO;
+
+import src.main.java.model.Employee;
 
 import java.util.List;
 
