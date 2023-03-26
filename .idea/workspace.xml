@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1363c0ee-b26c-4dca-8c79-3f651af3f46b" name="Changes" comment="dz 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/CityDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/CityDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/main/java/model/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/main/java/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/dao/EmployeeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/EmployeeDAOImpl.java" afterDir="false" />
+    <list default="true" id="1363c0ee-b26c-4dca-8c79-3f651af3f46b" name="Changes" comment="dz 3">
       <change beforePath="$PROJECT_DIR$/src/main/java/POJO/City.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/POJO/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/HibernateSessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/HibernateSessionFactoryUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +88,7 @@
       <workItem from="1679498506194" duration="3254000" />
       <workItem from="1679509284908" duration="159000" />
       <workItem from="1679730858945" duration="2078000" />
-      <workItem from="1679839203578" duration="1336000" />
+      <workItem from="1679839203578" duration="1804000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1679223703524</created>
@@ -129,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679502373827</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="dz 3">
+      <created>1679840738701</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679840738701</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +146,8 @@
     <MESSAGE value="1" />
     <MESSAGE value="dz" />
     <MESSAGE value="dz 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="dz 2" />
+    <MESSAGE value="dz 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="dz 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
